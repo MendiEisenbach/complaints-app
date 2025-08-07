@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const complaintSchema = new mongoose.Schema({
   category: {
     type: String,
-    enum: ['Food', 'Equipment', 'Orders', 'Other'],
+    enum: ['אוכל', 'ציוד', 'פקודות', 'אחר'],
     required: true
   },
   message: {
