@@ -1,9 +1,13 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import connectDB from './db/connect.js';
 
 dotenv.config();
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 connectDB();
 
@@ -13,6 +17,8 @@ app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 const PORT = process.env.PORT || 3000;
