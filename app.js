@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import connectDB from './db/connect.js';
+import complaintsRouter from './routes/complaints.js';
 
 dotenv.config();
 const app = express();
@@ -19,6 +20,8 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', complaintsRouter);
 
 
 const PORT = process.env.PORT || 3000;

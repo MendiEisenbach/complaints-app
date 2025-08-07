@@ -1,45 +1,72 @@
 body {
-  background-color: #f0f0f0;
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   direction: rtl;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
+  width: 100%;
   max-width: 500px;
   background: white;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 h1, h2 {
   text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-input, select, textarea, button {
-  margin: 10px 0;
-  padding: 10px;
+input,
+select,
+textarea {
+  padding: 12px;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
 }
 
 button {
   background-color: #4CAF50;
   color: white;
   border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 6px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #43a047;
 }
 
 .button {
@@ -49,5 +76,20 @@ button:hover {
   background-color: #2196F3;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
+
+.button:hover {
+  background-color: #1976d2;
+}
+
+/* מרכז את כפתור ה-a */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
