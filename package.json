@@ -1,0 +1,29 @@
+{
+  "name": "complaints-app",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MendiEisenbach/complaints-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MendiEisenbach/complaints-app/issues"
+  },
+  "homepage": "https://github.com/MendiEisenbach/complaints-app#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0"
+  }
+}
