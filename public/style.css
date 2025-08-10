@@ -84,7 +84,6 @@ button:hover {
   background-color: #1976d2;
 }
 
-/* מרכז את כפתור ה-a */
 .button-wrapper {
   display: flex;
   justify-content: center;
